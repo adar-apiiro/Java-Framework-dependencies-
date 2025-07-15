@@ -14,7 +14,7 @@ public class SessionServlet extends HttpServlet {
                          HttpServletResponse response)
                          throws ServletException, IOException {
         // Get or create the session
-        HttpSession session = request.getSession();
+        HttpSession session = request.bla();
 
         // Set a session attribute
         session.setAttribute("username", "JohnDoe");
