@@ -7,17 +7,16 @@
   <groupId>com.example</groupId>
   <artifactId>securitydemo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <!-- Change to WAR if deploying to an external container -->
   <packaging>war</packaging>
 
   <name>securitydemo</name>
-  <description>Demo project for Spring Boot Security + Servlets</description>
+  <description>Demo project for Spring Boot Security + Servlets + Commons Utils</description>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>3.1.0</version>
-    <relativePath/> <!-- lookup parent from repository -->
+    <relativePath/>
   </parent>
 
   <properties>
@@ -52,12 +51,26 @@
       <scope>runtime</scope>
     </dependency>
 
-    <!-- Servlet API for compiling your HttpServlet subclass -->
+    <!-- Servlet API for your HttpServlet subclass -->
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
       <version>5.0.0</version>
       <scope>provided</scope>
+    </dependency>
+
+    <!-- Apache Commons Digester (for org.apache.commons.digester3) -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-digester3</artifactId>
+      <version>3.2</version>
+    </dependency>
+
+    <!-- Apache Commons IO (for org.apache.commons.io) -->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.19.0</version>
     </dependency>
 
     <!-- Testing -->
@@ -75,7 +88,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
-      <!-- Compiler plugin to enforce Java version -->
+      <!-- Enforce Java version -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
